@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="240" viewBox="0 0 640 240" role="img" aria-labelledby="title desc">
+  <title id="title">Delta + Nix</title>
+  <desc id="desc">The Delta triangular mark and the blue Nix snowflake, separated by a neutral plus sign.</desc>
+  <!-- Delta mark: Zed Industries. Source: https://delta.dev/brand -->
+  <svg x="60" y="40" width="160" height="160" viewBox="0 0 16 16" aria-hidden="true">
+    <rect width="16" height="16" rx="3" fill="#e64a25"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.645 2.496a.66.66 0 0 1 1.143 0l5.974 10.348a.66.66 0 0 1-.571.989H4.773a.66.66 0 0 1-.571-.989L8.217 5.89l3.32 5.751H7.426l.565-.978h1.852L8.217 7.846l-2.892 5.009h8.314L8.217 3.463 2.229 13.833H1.1L7.645 2.496Z" fill="#fff"/>
+  </svg>
+  <path d="M304 120h32m-16-16v32" fill="none" stroke="#8b949e" stroke-width="6" stroke-linecap="round"/>
+  <!-- Nix snowflake: Simon Frankau and Tim Cuthbertson, CC BY 4.0.
+       https://github.com/NixOS/nixos-artwork/blob/master/logo/nix-snowflake-colours.svg -->
+  <svg x="400" y="20" width="200" height="200" viewBox="0 0 501.56251 501.56249" aria-hidden="true">
+    <defs>
+      <linearGradient id="nix-light" gradientUnits="userSpaceOnUse" gradientTransform="translate(70.650339,-1055.1511)" x1="200.59668" y1="351.41116" x2="290.08701" y2="506.18814"><stop offset="0" stop-color="#699ad7"/><stop offset=".243" stop-color="#7eb1dd"/><stop offset="1" stop-color="#7ebae4"/></linearGradient>
+      <linearGradient id="nix-dark" gradientUnits="userSpaceOnUse" gradientTransform="translate(864.69589,-1491.3405)" x1="-584.19934" y1="782.33563" x2="-496.29703" y2="937.71399"><stop offset="0" stop-color="#415e9a"/><stop offset=".232" stop-color="#4a6baf"/><stop offset="1" stop-color="#5277c3"/></linearGradient>
+    </defs>
+    <g transform="translate(-156.41121,933.30685)"><g transform="matrix(.99994059,0,0,.99994059,-.06321798,33.188377)" fill-rule="evenodd">
+      <path id="nix-light-arm" d="m309.549-710.388 122.197 211.675-56.157.527-32.624-56.869-32.856 56.565-27.903-.011-14.291-24.69 46.811-80.49-33.23-57.826z" fill="url(#nix-light)"/>
+      <use xlink:href="#nix-light-arm" transform="rotate(60 407.112 -715.787)"/><use xlink:href="#nix-light-arm" transform="rotate(-60 407.312 -715.7)"/><use xlink:href="#nix-light-arm" transform="rotate(180 407.419 -715.757)"/>
+      <path id="nix-dark-arm" d="m309.549-710.388 122.197 211.675-56.157.527-32.624-56.869-32.856 56.565-27.903-.011-14.291-24.69 46.811-80.49-33.23-57.826z" fill="url(#nix-dark)"/>
+      <use xlink:href="#nix-dark-arm" transform="rotate(120 407.339 -716.084)"/><use xlink:href="#nix-dark-arm" transform="rotate(-120 407.288 -715.87)"/>
+    </g></g>
+  </svg>
+</svg>
