@@ -75,7 +75,14 @@ stdenv.mkDerivation {
       ]
     }
     wrapProgram "$out/lib/delta/bin/delta" \
-      --prefix XDG_DATA_DIRS : "$out/share"
+      --prefix XDG_DATA_DIRS : "$out/share" \
+      --prefix LD_LIBRARY_PATH : ${
+        lib.makeLibraryPath [
+          libGL
+          wayland
+          vulkan-loader
+        ]
+      }
   '';
 
   doInstallCheck = true;
