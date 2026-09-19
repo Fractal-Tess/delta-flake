@@ -8,7 +8,13 @@
     let
       systems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
-      packageFor = system: nixpkgs.legacyPackages.${system}.callPackage ./packages/delta.nix { };
+      pkgsFor =
+        system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      packageFor = system: (pkgsFor system).callPackage ./packages/delta.nix { };
     in
     {
       packages = forAllSystems (
