@@ -56,10 +56,10 @@ stdenv.mkDerivation {
     cp -a bin lib "$out/lib/delta/"
     cp -a share/. "$out/share/"
 
-    ln -s "$out/lib/delta/bin/delta" "$out/bin/delta"
+    ln -s "$out/lib/delta/bin/delta" "$out/bin/zed-delta"
 
     substituteInPlace "$out/share/applications/dev.zed.Delta.desktop" \
-      --replace-fail "Exec=delta cli open %U" "Exec=$out/bin/delta cli open %U"
+      --replace-fail "Exec=delta cli open %U" "Exec=$out/bin/zed-delta cli open %U"
 
     runHook postInstall
   '';
@@ -81,7 +81,7 @@ stdenv.mkDerivation {
   doInstallCheck = true;
   installCheckPhase = ''
     runHook preInstallCheck
-    version_output="$($out/bin/delta --version)"
+    version_output="$($out/bin/zed-delta --version)"
     test "$version_output" = "delta ${version}"
     test -f "$out/share/applications/dev.zed.Delta.desktop"
     runHook postInstallCheck
@@ -92,7 +92,7 @@ stdenv.mkDerivation {
     homepage = "https://delta.dev";
     downloadPage = "https://delta.dev/download";
     license = lib.licenses.unfree;
-    mainProgram = "delta";
+    mainProgram = "zed-delta";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     platforms = [ "x86_64-linux" ];
   };

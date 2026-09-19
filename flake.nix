@@ -31,7 +31,7 @@
       apps = forAllSystems (system: {
         default = {
           type = "app";
-          program = "${self.packages.${system}.delta}/bin/delta";
+          program = "${self.packages.${system}.delta}/bin/zed-delta";
           meta.description = "Run Delta";
         };
       });

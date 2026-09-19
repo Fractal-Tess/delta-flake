@@ -43,4 +43,6 @@ nix flake check
 nix run . -- --version
 ```
 
+The installed command is `zed-delta`, avoiding a collision with the unrelated `delta` Git diff pager in nixpkgs. The desktop launcher remains named **Delta**.
+
 The Delta mark is from [Zed Industries](https://delta.dev/brand). The Nix snowflake is by Simon Frankau and Tim Cuthbertson under [CC BY 4.0](https://github.com/NixOS/nixos-artwork/blob/master/LICENSE). The marks were resized and arranged; this project is not endorsed by either project.
