@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://delta.dev"><img src="https://img.shields.io/badge/Delta-0.16.1-e64a25" alt="Delta 0.16.1" /></a>
+  <a href="https://delta.dev"><img src="https://img.shields.io/badge/Delta-official-e64a25" alt="Official Delta package" /></a>
   <a href="https://nixos.org"><img src="https://img.shields.io/badge/Nix-flake-5277c3?logo=nixos" alt="Nix flake" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/flake-MIT-blue" alt="MIT license" /></a>
 </p>
@@ -12,16 +12,15 @@
 
 A Nix flake for the Linux build of [Delta](https://delta.dev), Zed's multiplayer environment for coding with agents and reviewing their work.
 
-It packages the official binary archive, installs its desktop entry and icons, and exposes both NixOS and Home Manager modules. Delta itself is account-gated and distributed under Zed's terms, so its archive cannot be downloaded unattended by Nix.
+It packages the official binary archive, installs its desktop entry and icons, and exposes both NixOS and Home Manager modules. It now follows Zed's official [delta-nix](https://github.com/zed-industries/delta-nix) release pins on x86_64 and ARM64 Linux. Nix downloads the official public release archives automatically.
 
 ## Install
 
-Download `delta-linux-x86_64.tar.gz` from the [official download page](https://delta.dev/download), then add it to the Nix store:
-
 ```console
-nix-store --add-fixed sha256 ~/Downloads/delta-linux-x86_64.tar.gz
 nix run github:Fractal-Tess/delta-flake
 ```
+
+No manual archive import is needed. A daily workflow refreshes the upstream pin and validates the package. Pushes, pull requests and successful updater runs trigger native builds on both supported Linux architectures.
 
 For NixOS, add the flake input and module, then enable it:
 
