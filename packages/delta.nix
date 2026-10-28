@@ -29,7 +29,10 @@ symlinkJoin {
   name = "delta-${upstream.version}";
   paths = [ patched ];
   postBuild = ''
-    ln -s delta "$out/bin/zed-delta"
+    # Do not shadow the unrelated `delta` Git pager on the user's PATH.
+    rm "$out/bin/delta"
+    ln -s "${patched}/bin/delta" "$out/bin/zed-delta"
+    test -x "$out/bin/zed-delta"
   '';
   passthru.version = upstream.version;
   meta = upstream.meta // {
