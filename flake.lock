@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795031202,
-        "narHash": "sha256-cSWTHKgwLBHXjaauR6L3bNw5t1UOae4Cs9arnH5V7hg=",
+        "lastModified": 1795088248,
+        "narHash": "sha256-n2zn+zv5nk6RQVfJ+9awBtrHyWqAnz5iae1eHLkW8HQ=",
         "owner": "zed-industries",
         "repo": "delta-nix",
-        "rev": "efb83527330ef6192b6dc5c134d2e7928d4e0efa",
+        "rev": "5416b6aedde0113a05698df5b4bd39f4aa6dd0f2",
         "type": "github"
       },
       "original": {
